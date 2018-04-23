@@ -150,6 +150,12 @@ public class Moltin {
         return ProductRequest(withConfiguration: self.config)
     }
 
+    public func orders(withCustomerToken customerToken: String) -> OrderRequest {
+        let orderRequest = OrderRequest(withConfiguration: self.config)
+        orderRequest.moltinCustomerToken = customerToken
+        return orderRequest
+    }
+
     /**
      Allows the user to set up a instance of the `Moltin` object with a client ID and an optional configuration object
      

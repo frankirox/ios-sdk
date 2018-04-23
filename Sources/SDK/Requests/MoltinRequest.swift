@@ -38,6 +38,17 @@ public class MoltinRequest {
     internal var query: MoltinQuery
     internal var auth: MoltinAuth
 
+    internal var moltinCustomerToken: String?
+
+    internal var headers: [String: String]? {
+        var headers: [String: String] = [:]
+        if let customerToken = self.moltinCustomerToken {
+            headers["X-Moltin-Customer-Token"] = customerToken
+        }
+
+        return headers
+    }
+
     // MARK: - Init
 
     /**
@@ -246,7 +257,10 @@ public class MoltinRequest {
         self.auth.authenticate { [weak self] (result) in
             switch result {
             case .success(let result):
-                let request = self?.http.configureRequest(urlRequest, withToken: result.token, withConfig: self?.config)
+                let request = self?.http.configureRequest(urlRequest,
+                                                          withToken: result.token,
+                                                          withConfig: self?.config,
+                                                          withAdditionalHeaders: self?.headers)
                 self?.http.executeRequest(request) { (data, response, error) in
                     completionHandler(data, response, error)
                 }
