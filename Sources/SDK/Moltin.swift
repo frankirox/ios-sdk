@@ -91,6 +91,23 @@ public class Moltin {
     }
 
     /**
+     Entry point to requesting information about customers and related entries
+     
+     - Author:
+     Craig Tweedy
+     
+     - returns:
+     A `CustomerRequest` object, inheriting from `MoltinRequest`, with the config from the `Moltin` class.
+     
+     This object allows the developer to interact with customers and related entires such as addresses. Customers and Addresses can only be accessed with valid customer tokens.
+     */
+    public func customer(withCustomerToken customerToken: String) -> CustomerRequest {
+        let request = CustomerRequest(withConfiguration: self.config)
+        request.moltinCustomerToken = customerToken
+        return request
+    }
+
+    /**
      Entry point to requesting information about files
      
      - Author:
@@ -136,6 +153,23 @@ public class Moltin {
     }
 
     /**
+     Entry point to requesting information about orders
+     
+     - Author:
+     Craig Tweedy
+     
+     - returns:
+     A `OrderRequest` object, inheriting from `MoltinRequest`, with the config from the `Moltin` class.
+     
+     This object allows the developer to interact with orders. Orders can only be accessed with customer tokens.
+     */
+    public func order(withCustomerToken customerToken: String) -> OrderRequest {
+        let request = OrderRequest(withConfiguration: self.config)
+        request.moltinCustomerToken = customerToken
+        return request
+    }
+
+    /**
      Entry point to requesting information about products
      
      - Author:
@@ -148,12 +182,6 @@ public class Moltin {
      */
     public var product: ProductRequest {
         return ProductRequest(withConfiguration: self.config)
-    }
-
-    public func orders(withCustomerToken customerToken: String) -> OrderRequest {
-        let orderRequest = OrderRequest(withConfiguration: self.config)
-        orderRequest.moltinCustomerToken = customerToken
-        return orderRequest
     }
 
     /**

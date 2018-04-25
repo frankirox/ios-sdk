@@ -185,6 +185,10 @@
 		C392EA52203DB823006CD1D0 /* moltin WatchKit Example.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C392EA37203DB822006CD1D0 /* moltin WatchKit Example.app */; };
 		C392EA61203DB836006CD1D0 /* moltin_tvOS_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C392EA60203DB836006CD1D0 /* moltin_tvOS_Tests.swift */; };
 		C392EA63203DB836006CD1D0 /* moltin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C392E9DF203DB64E006CD1D0 /* moltin.framework */; };
+		C3E739DA209113610070C361 /* CustomerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E739D9209113610070C361 /* CustomerRequest.swift */; };
+		C3E739DB209113610070C361 /* CustomerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E739D9209113610070C361 /* CustomerRequest.swift */; };
+		C3E739DC209113610070C361 /* CustomerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E739D9209113610070C361 /* CustomerRequest.swift */; };
+		C3E739DD209113610070C361 /* CustomerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E739D9209113610070C361 /* CustomerRequest.swift */; };
 		C3FB57A8204028870007288D /* CartRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB57A7204028870007288D /* CartRequest.swift */; };
 		C3FB57AA2040782C0007288D /* moltin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C392E9C5203DB630006CD1D0 /* moltin.framework */; };
 		C3FF26FF2061205900CA226D /* Timestamps.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FF26FE2061205800CA226D /* Timestamps.swift */; };
@@ -362,6 +366,7 @@
 		C392EA5E203DB836006CD1D0 /* moltin tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "moltin tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C392EA60203DB836006CD1D0 /* moltin_tvOS_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moltin_tvOS_Tests.swift; sourceTree = "<group>"; };
 		C392EA62203DB836006CD1D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3E739D9209113610070C361 /* CustomerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerRequest.swift; sourceTree = "<group>"; };
 		C3FB57A7204028870007288D /* CartRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartRequest.swift; sourceTree = "<group>"; };
 		C3FF26FE2061205800CA226D /* Timestamps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timestamps.swift; sourceTree = "<group>"; };
 		C3FF2700206124D700CA226D /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
@@ -542,6 +547,7 @@
 				C3715BE9203F1A3900287C1B /* MoltinAuth.swift */,
 				C3FB57A7204028870007288D /* CartRequest.swift */,
 				C336E564206155B2008C2005 /* FlowRequest.swift */,
+				C3E739D9209113610070C361 /* CustomerRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -1122,6 +1128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3E739DA209113610070C361 /* CustomerRequest.swift in Sources */,
 				C3821AE6204440F5001EF864 /* Cart.swift in Sources */,
 				C3FF26FF2061205900CA226D /* Timestamps.swift in Sources */,
 				C3715BFC203F59A100287C1B /* Currency.swift in Sources */,
@@ -1161,6 +1168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3E739DB209113610070C361 /* CustomerRequest.swift in Sources */,
 				C336E5B720627633008C2005 /* Timestamps.swift in Sources */,
 				C3715C03203F59F200287C1B /* File.swift in Sources */,
 				C3715C04203F59F200287C1B /* Flow.swift in Sources */,
@@ -1200,6 +1208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3E739DC209113610070C361 /* CustomerRequest.swift in Sources */,
 				C336E5B220627632008C2005 /* Timestamps.swift in Sources */,
 				C3715C07203F59F200287C1B /* File.swift in Sources */,
 				C3715C08203F59F200287C1B /* Flow.swift in Sources */,
@@ -1239,6 +1248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3E739DD209113610070C361 /* CustomerRequest.swift in Sources */,
 				C336E5AD20627631008C2005 /* Timestamps.swift in Sources */,
 				C3715C0C203F59F300287C1B /* Flow.swift in Sources */,
 				C336E5A22062762C008C2005 /* DateFormatter.swift in Sources */,

@@ -35,3 +35,26 @@ open class Customer: Codable {
         return customerData
     }
 }
+
+/// A data object used to update customers with
+open class UpdateCustomer {
+    /// The ID of this customer
+    public var id: String?
+    /// The email of this customer
+    public var email: String?
+    /// The name of this customer
+    public var name: String?
+    /// The password of this customer
+    public var password: String?
+
+    func toDictionary() -> [String: Any] {
+        var customerData: [String: Any] = [:]
+
+        customerData["id"] = self.id
+        customerData["email"] = self.email
+        customerData["name"] = self.name
+        customerData["password"] = self.password
+
+        return customerData
+    }
+}
