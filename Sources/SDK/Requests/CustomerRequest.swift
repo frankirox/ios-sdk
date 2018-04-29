@@ -34,6 +34,28 @@ public class CustomerRequest: MoltinRequest {
     public typealias DefaultAddressObjectRequestHandler = ObjectRequestHandler<Address>
 
     /**
+     Get a token for a `Customer`
+     - Author:
+     Craig Tweedy
+     - parameters:
+     - withEmail: The email for the customer
+     - withPassword: The password for the customer
+     - completionHandler: The handler to be called on success or failure
+     - returns:
+     A instance of `MoltinRequest` which encapsulates the request.
+     */
+    @discardableResult public func getToken(withEmail email: String,
+                                            withPassword password: String,
+                                            completionHandler: @escaping ObjectRequestHandler<CustomerToken>) -> MoltinRequest {
+        let data = [
+            "type": "token",
+            "email": email,
+            "password": password
+        ]
+        return super.post(withPath: "\(self.endpoint)/tokens", withData: data, completionHandler: completionHandler)
+    }
+
+    /**
      Return all instances of type `Customer`
      - Author:
      Craig Tweedy
